@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_entrada"
+    android:id="@+id/activity_nao_humano"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="br.usp.each.lapis.macacosmemovam.EntradaActivity">
+    tools:context="br.usp.each.lapis.macacosmemovam.NaoHumanoActivity">
 
-    <Button
-        android:text="Sessao nH"
+    <Chronometer
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button_nao_humanos"
-        android:onClick="openNaoHumanoActivity"
-        android:layout_marginTop="64dp"
-        android:layout_alignTop="@+id/button_humanos"
-        android:layout_alignStart="@+id/button_humanos" />
+        android:id="@+id/chronometerSessao"
+        android:layout_marginBottom="22dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="12dp" />
 
     <Button
-        android:text="Sessao H"
+        android:text="Encerar sessao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button_humanos"
-        android:layout_marginTop="26dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/button"
+        android:onClick="encerarSessao"
+        android:layout_marginStart="40dp"
+        android:layout_alignBaseline="@+id/chronometerSessao"
+        android:layout_alignBottom="@+id/chronometerSessao"
+        android:layout_toEndOf="@+id/chronometerSessao" />
+
 </RelativeLayout>
